@@ -18,3 +18,13 @@ pr reviewer를  자동 등록하기 위해 사용한다.
 /backend/ @lsh1215 @YunJuwon0825 @Gwanghyeon-k
 ~~~
 
+## AI code review(ci)
+
+### 용도
+pr시 ai가 코드 리뷰를 달아준다.
+
+### 방법
+1. gpt api key를 발급받는다.
+2. settings -> secrets and variables -> actions에 OPENAI_API_KEY값을 넣는다.<br>
+   이때 secrets.GITHUB_TOKEN는 자동 발급되는 값임
+3. ci file을 작성하여 테스트한다.
