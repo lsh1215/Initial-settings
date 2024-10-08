@@ -1,0 +1,27 @@
+services:
+  #  backend:
+  #    build:
+  #      context: .
+  #    container_name: backend
+  #    restart: always
+  #    environment:
+  #      SPRING_DATASOURCE_URL: ${MYSQL_URL}
+  #      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
+  #      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD}
+  #      SPRING_PROFILES_ACTIVE: prod
+  #    ports:
+  #      - "8080:8080"
+  #    env_file:
+  #      - .env
+  #    volumes:
+  #      - .:/app
+  #      - ./logs:/var/log/spring-boot
+
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: picTalk
+      MYSQL_ROOT_PASSWORD: "1234"
